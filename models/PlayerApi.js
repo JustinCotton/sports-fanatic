@@ -13,10 +13,23 @@ const PlayerSchema = new mongoose.Schema({
         steals: Number,
         errors: Number
     },
-    allStar: Boolean,
+    isAllStar: Boolean,
     cityName: String,
     teamName: String
 });
+
+function getAllPlayers (req,res) {
+    return PlayerCollection.find();
+}
+
+function createPlayer (req,res) {
+    return PlayerCollection.create(req.body)}
+
+let PlayerCollection = mongoose.model('Player', PlayerSchema);
   
 // export the Player model with module.exports
-module.exports = mongoose.model('Player', PlayerSchema);
+module.exports = {
+    PlayerCollection,
+    getAllPlayers,
+    createPlayer
+}

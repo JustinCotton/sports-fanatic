@@ -8,15 +8,8 @@ const connectionString = "mongodb://localhost/sportstown";
 // When it connects, then console.log "Connected to MongoDB"
 mongoose.connect(connectionString, { useNewUrlParser: true})
   .then(() => {
-    console.log("Connected to MongoDB");
+    console.log("Connected to MongoDB at: " + connectionString);
   });
 
-// could also say:
-// mongoose.connect("mongodb://localhost/sportstown", () = > {
-//    console.log("MongoDB connected!")
-// })
-
-// export your mongoose connection
+// export mongoose connection
 module.exports = mongoose;
-
-// point of connection.js file is to connect to your database
