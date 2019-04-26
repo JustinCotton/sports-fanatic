@@ -22,4 +22,4 @@
 
 ## Future Development
 
-  * Adding additional sports with the corresponding stats
+  * Create additional schemas to reflect stats for different sports
